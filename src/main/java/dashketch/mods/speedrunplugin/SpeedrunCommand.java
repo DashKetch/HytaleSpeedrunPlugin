@@ -19,6 +19,7 @@ public class SpeedrunCommand extends CommandBase {
         this.addSubCommand(new SpeedrunStartCommand() {
             @Override
             protected @Nullable CompletableFuture<Void> execute(@NonNull CommandContext ctx) {
+                chooseRunner();
                 ctx.sendMessage(Message.raw(speedRunner+"has been chosen to be the speedrunner. Everyone else is a hunter!")); //replace with refrence to a method in SpeedrunStartCommand.java
                 return null;
             }

@@ -5,7 +5,7 @@ import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 
 public class SpeedrunPlugin extends JavaPlugin {
-    private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
+    public static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
 
     public SpeedrunPlugin(JavaPluginInit init) {
         super(init);
