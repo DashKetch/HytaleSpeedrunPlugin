@@ -1,4 +1,4 @@
-package com.example.exampleplugin;
+package dashketch.mods.speedrunplugin;
 
 import com.hypixel.hytale.protocol.GameMode;
 import com.hypixel.hytale.server.core.Message;
