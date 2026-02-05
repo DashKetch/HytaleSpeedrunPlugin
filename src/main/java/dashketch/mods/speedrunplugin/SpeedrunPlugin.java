@@ -1,6 +1,8 @@
 package dashketch.mods.speedrunplugin;
 
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.server.core.event.events.player.PlayerConnectEvent;
+import com.hypixel.hytale.server.core.event.events.player.PlayerDisconnectEvent;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 
@@ -14,7 +16,10 @@ public class SpeedrunPlugin extends JavaPlugin {
 
     @Override
     protected void setup() {
-        this.getCommandRegistry().registerCommand(new ExampleCommand(this.getName(), this.getManifest().getVersion().toString()));
         this.getCommandRegistry().registerCommand(new SpeedrunCommand());
+
+        this.getEventRegistry().register(PlayerConnectEvent.class, event -> PlayerRegistry.playerJoined(event.getPlayerRef()));
+
+        this.getEventRegistry().register(PlayerDisconnectEvent.class, event -> PlayerRegistry.playerLeft(event.getPlayerRef()));
     }
 }

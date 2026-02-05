@@ -1,0 +1,23 @@
+{
+  "TranslationProperties": {
+    "Name": "item.custom.tracking_compass"
+  },
+
+  "Categories": [
+    "Items.Tools",
+    "Items.Misc",
+    "Items.All"
+  ],
+
+  "Icon": "Common/ItemTextures/compass-texture.png",
+  "Model": "Common/ItemModels/compass.blockymodel",
+  "Texture": "Common/ItemTextures/compass-texture.png",
+
+  "Quality": "Common",
+
+  "Tags": {
+    "Type": [
+      "Tool"
+    ]
+  }
+}

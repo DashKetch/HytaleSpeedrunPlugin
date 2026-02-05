@@ -1,16 +1,43 @@
 package dashketch.mods.speedrunplugin;
 
-import com.hypixel.hytale.server.core.command.system.AbstractCommand;
+import com.hypixel.hytale.server.core.Message;
+import com.hypixel.hytale.server.core.command.system.CommandContext;
+import com.hypixel.hytale.server.core.command.system.basecommands.CommandBase;
+import com.hypixel.hytale.server.core.universe.PlayerRef;
 
-public abstract class SpeedrunStartCommand extends AbstractCommand {
+import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class SpeedrunStartCommand extends CommandBase {
+
+    private static final Random RANDOM = new Random();
+
     public SpeedrunStartCommand() {
-        super("Start", "Start the speedrun!");
+        super("start", "Start the speedrun");
     }
 
-    public void chooseRunner() {
-        /*
-        TODO Figure out how to get all active players and possibly index them,
-         then get a random index and assign the player with that index as speedrunner
-         */
+    @Override
+    protected void executeSync(@Nonnull CommandContext ctx) {
+
+        List<PlayerRef> players = new ArrayList<>(
+                PlayerRegistry.getOnlinePlayers()
+        );
+
+        if (players.isEmpty()) {
+            ctx.sendMessage(Message.raw("No players are currently online."));
+            return;
+        }
+
+        PlayerRef chosen = players.get(
+                RANDOM.nextInt(players.size())
+        );
+
+        SpeedrunCommand.speedRunnerName = chosen.getUsername();
+
+        ctx.sendMessage(Message.raw(
+                chosen.getUsername() + " has been chosen as the speedrunner!"
+        ));
     }
 }

@@ -10,9 +10,17 @@
   ],
   "Website": "${plugin_website}",
   "ServerVersion": "${server_version}",
+
+  "Main": "${plugin_main_entrypoint}",
+
+  "IncludesAssetPack": true,
+
+  "AssetPack": {
+    "Root": "resources",
+    "Priority": 0
+  },
+
   "Dependencies": {},
   "OptionalDependencies": {},
-  "DisabledByDefault": false,
-  "IncludesAssetPack": true,
-  "Main": "${plugin_main_entrypoint}"
+  "DisabledByDefault": false
 }
