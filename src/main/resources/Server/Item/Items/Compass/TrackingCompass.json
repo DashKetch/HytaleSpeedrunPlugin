@@ -1,0 +1,12 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.tracking_compass.name",
+    "Description": "server.items.tracking_compass.description"
+  },
+  "Icon": "Icons/ItemsGenerated/compass-texture.png",
+  "Model": "Items/Compass/compass.blockymodel",
+  "Texture": "Items/Compass/compass-texture.png",
+  "Quality": "Common",
+  "ItemLevel": 0,
+  "MaxStack": 1
+}
