@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.tracking_compass.name",
-    "Description": "server.items.tracking_compass.description"
+    "Name": "Tracking Compass",
+    "Description": "A compass for tracking the speedrunner."
   },
   "Icon": "Icons/ItemsGenerated/compass-texture.png",
   "Model": "Items/Compass/compass.blockymodel",
