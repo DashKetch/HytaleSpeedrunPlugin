@@ -3,10 +3,22 @@
     "Name": "Tracking Compass",
     "Description": "A compass for tracking the speedrunner."
   },
-  "Icon": "Icons/ItemsGenerated/compass-texture.png",
+  "Icon": "Icons/ItemsGenerated/TrackingCompass.png",
   "Model": "Items/Compass/compass.blockymodel",
   "Texture": "Items/Compass/compass-texture.png",
   "Quality": "Common",
   "ItemLevel": 0,
-  "MaxStack": 1
+  "MaxStack": 1,
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      326,
+      181,
+      0
+    ],
+    "Translation": [
+      2,
+      -4
+    ]
+  }
 }
