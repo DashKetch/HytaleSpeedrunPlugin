@@ -14,6 +14,8 @@ public class SpeedrunStartCommand extends CommandBase {
 
     private static final Random RANDOM = new Random();
 
+    public static PlayerRef speedRunner;
+
     public SpeedrunStartCommand() {
         super("start", "Start the speedrun");
     }
