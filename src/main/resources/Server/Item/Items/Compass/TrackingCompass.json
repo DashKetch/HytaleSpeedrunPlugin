@@ -20,5 +20,14 @@
       2,
       -4
     ]
+  },
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "TrackingCompassInteraction"
+        }
+      ]
+    }
   }
 }
