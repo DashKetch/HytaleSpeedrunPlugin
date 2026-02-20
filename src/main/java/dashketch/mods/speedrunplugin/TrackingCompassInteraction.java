@@ -22,10 +22,7 @@ public class TrackingCompassInteraction extends SimpleInstantInteraction {
                     .build();
 
     @Override
-    protected void firstRun(
-            @NonNull InteractionType interactionType,
-            @NonNull InteractionContext interactionContext,
-            @NonNull CooldownHandler cooldownHandler
+    protected void firstRun(@Nonnull InteractionType interactionType, @Nonnull InteractionContext interactionContext, @Nonnull CooldownHandler cooldownHandler
     ) {
         PlayerRef speedRunner = SpeedrunStartCommand.speedRunner;
 
